@@ -1,0 +1,138 @@
+:root{
+  --bg:#0f1724;
+
+  --card:#0b1220;
+
+  --accent:#7c4dff;
+
+  --accent-2:#ffcc00;
+
+  --muted:#98a0b3;
+}
+*{box-sizing:border-box}
+
+html,body{
+
+  height:100%;
+
+  margin:0;
+
+  font-family:'Poppins',system-ui,-apple-system;
+
+  background:linear-gradient(180deg,#071028 0%, #07101a 60%);
+
+  color:#e6eef8;
+}
+a{color:inherit}
+
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+
+.brand{display:flex;align-items:center;gap:12px}
+
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent), #4a90e2);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:'JetBrains Mono'}
+
+.title{font-weight:600}
+
+.nav-toggle{display:none}
+
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+
+nav a{padding:8px 12px;border-radius:8px;font-weight:500;color:var(--muted);text-decoration:none}
+
+nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
+
+
+.layout{display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:12px}
+
+.sidebar{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:12px}
+
+.photo{
+  width:100%;
+  height:260px;
+  border-radius:10px;
+  background:url('jasraj-photo.jpeg') center/cover no-repeat;
+  display:block;
+  margin-bottom:16px;
+  border:2px solid rgba(255,255,255,0.04);
+}
+
+.name{font-size:20px;font-weight:700;margin-bottom:6px}
+
+.role{font-size:13px;color:var(--muted);margin-bottom:12px}
+
+.info-list{font-size:14px;color:var(--muted);line-height:1.6}
+
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+.skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px}
+
+
+.main{padding:8px}
+
+.hero{background:linear-gradient(90deg, rgba(124,77,255,0.12), rgba(255,204,0,0.04));padding:28px;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+
+.hero .heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+.hero h1{margin:0;font-size:24px}
+
+.hero p{margin:0;color:var(--muted)}
+
+.section{margin-top:20px}
+
+.section h3{margin:0 0 14px 0;color:var(--accent)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+
+.card{background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.card h4{margin:0 0 8px 0}
+
+
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+.timeline{display:flex;flex-direction:column;gap:12px}
+
+.time-item{display:flex;gap:12px;align-items:flex-start}
+
+.time-year{width:74px;font-family:'JetBrains Mono';color:var(--muted);font-size:13px}
+
+.time-body h4{margin:0 0 6px 0}
+
+.time-body p{margin:0;color:var(--muted);font-size:14px}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+
+.portfolio-item{height:140px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));display:flex;align-items:end;padding:10px;color:#fff;font-weight:600}
+
+.contact{display:grid;gap:8px;max-width:560px}
+
+input,textarea{background:#081124;border:1px solid rgba(255,255,255,0.03);color:#e6eef8;padding:10px;border-radius:8px;font-size:14px}
+
+button{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:8px;font-weight:700;cursor:pointer}
+
+footer{margin-top:24px;padding:20px;border-radius:8px;text-align:center;color:var(--muted);font-size:13px;background:transparent}
+
+
+@media (max-width:900px){
+
+  .layout{grid-template-columns:1fr;gap:18px}
+
+  .sidebar{order:2}
+
+  .main{order:1}
+
+  nav ul{display:none}
+
+  .nav-toggle{display:block}
+
+  input[type=checkbox].nav-toggle{position:absolute;left:-9999px}
+
+  .hamburger{display:inline-block;cursor:pointer;padding:6px;border-radius:8px;background:rgba(255,255,255,0.02)}
+
+  nav.mobile{display:none}
+
+  input.nav-toggle:checked + .hamburger + nav.mobile{display:block;margin-top:12px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+  
+  nav.mobile a{display:block;padding:10px 6px;border-radius:6px;color:var(--muted);text-decoration:none}
+}
